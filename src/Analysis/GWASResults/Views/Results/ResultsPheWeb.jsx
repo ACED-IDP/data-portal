@@ -14,7 +14,7 @@ import ManhattanPlot from '../../SharedComponents/Diagrams/ManhattanPlot/Manhatt
 const ResultsPheWeb = () => {
   const { selectedRowData } = useContext(SharedContext);
   const { name, uid } = selectedRowData;
-  const { data, status } = useQuery( //do it here ....some new method like ...get data from presigned url
+  const { data, status } = useQuery(
     ['getDataForWorkflowArtifact', name, uid, 'pheweb_json_index'],
     () => getDataForWorkflowArtifact(name, uid, 'pheweb_json_index'),
     queryConfig,
